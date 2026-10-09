@@ -54,10 +54,13 @@ satellites.
 %{_bindir}/gr_satellites_ssdv
 %{_bindir}/smog_p_spectrum
 %{_libdir}/libgnuradio-satellites.so*
+%{_libdir}/cmake/satellites/
 %dir %{_includedir}/satellites
 %{_includedir}/satellites/*
 %{python3_sitearch}/satellites/
 %{_datadir}/gnuradio/grc/blocks/satellites_*.block.yml
+# upstream installs this one block without the satellites_ prefix
+%{_datadir}/gnuradio/grc/blocks/variable_time_format_parameters.block.yml
 %{_mandir}/man1/gr_satellites.1*
 %{_mandir}/man1/gr_satellites_ssdv.1*
 %{_mandir}/man1/smog_p_spectrum.1*
