@@ -13,7 +13,7 @@ BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gnuradio-devel >= 3.10
 BuildRequires:  libsndfile-devel
-BuildRequires:  libspdlog-devel
+BuildRequires:  spdlog-devel
 BuildRequires:  orc-devel
 BuildRequires:  pkgconf-pkg-config
 BuildRequires:  pybind11-devel
