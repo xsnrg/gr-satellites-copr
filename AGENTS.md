@@ -8,6 +8,17 @@ or build system in this repo.
 ## Spec conventions
 - `Source0` is a URL to the upstream GitHub release tarball (`archive/refs/tags/v<version>`).
   No local tarball, no `sources` file.
+- Gotchas verified by the first Copr build (5.9.0-1):
+  - Fedora name is `spdlog-devel`, not `libspdlog-devel`.
+  - `boost-devel` and `gmp-devel` are required: `GnuradioConfig.cmake` does
+    `find_dependency(Boost)`/MPLIB (mpir-or-gmp via pkg-config) or `find_package(Gnuradio)` fails.
+  - GNURadio cmake installs the Python module under `lib64` even for pure Python:
+    use `%{python3_sitearch}/satellites/` in `%files`, not `python3_sitelib`.
+  - Upstream installs `/usr/lib64/cmake/satellites/` and one block file without the
+    `satellites_` prefix (`variable_time_format_parameters.block.yml`); both are listed
+    explicitly in `%files`.
+- `Source0` is a URL to the upstream GitHub release tarball (`archive/refs/tags/v<version>`).
+  No local tarball, no `sources` file.
 - Upstream releases for GNU Radio 3.10 come from the v5.x.y series (maint-3.10 branch).
   The v4.x.y series (GNU Radio 3.9) was frozen 2025-07-31; do not package it.
 - Upstream update: bump `Version`, reset `Release` to `1%{?dist}`, add `%changelog` entry.
