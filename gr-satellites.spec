@@ -9,6 +9,7 @@ Source0:        %{url}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  bzip2
 BuildRequires:  cmake
+BuildRequires:  boost-devel
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gnuradio-devel >= 3.10
