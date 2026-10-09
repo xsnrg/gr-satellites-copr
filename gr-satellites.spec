@@ -56,7 +56,7 @@ satellites.
 %{_libdir}/libgnuradio-satellites.so*
 %dir %{_includedir}/satellites
 %{_includedir}/satellites/*
-%{python3_sitelib}/satellites/
+%{python3_sitearch}/satellites/
 %{_datadir}/gnuradio/grc/blocks/satellites_*.block.yml
 %{_mandir}/man1/gr_satellites.1*
 %{_mandir}/man1/gr_satellites_ssdv.1*
