@@ -12,6 +12,7 @@ BuildRequires:  cmake
 BuildRequires:  boost-devel
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
+BuildRequires:  gmp-devel
 BuildRequires:  gnuradio-devel >= 3.10
 BuildRequires:  libsndfile-devel
 BuildRequires:  spdlog-devel
